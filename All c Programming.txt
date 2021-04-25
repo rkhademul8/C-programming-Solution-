@@ -1,0 +1,207 @@
+
+1.**This is the Basic C programm**
+
+#include <stdio.h>
+
+int main() {
+    
+    printf("My name is: ABC \n");
+    printf("My Age is: 20 \n");
+    printf("My college name: Nawabgonj GOVT. College \n");
+    printf("DOB:10/5/2005");
+    
+}
+
+
+2.**Multiplication Using C Language**
+
+#include <stdio.h>
+
+int main() {
+    
+    int a, b, c;
+    printf("Entet the first number: ");
+    scanf("%d",&a);
+    printf("Entet the second number: ");
+    scanf("%d",&b);
+    
+    c=a*b;
+    printf("The result is: %d",c);
+}
+
+
+
+3. Leap year or Not leap year check
+
+#include <stdio.h>
+
+int main()
+{
+ 
+     int year;
+     printf("Enter the year:");
+     scanf("%d",&year);
+     
+     if (year%4==0 && year%100!=0 || year%400==0)
+     printf("  is leap year");
+     
+     else
+     printf("  is not leap year");
+     
+}
+
+4. switch 
+
+
+#include <stdio.h>
+ 
+int main()
+{
+    int num1,num2;
+    float result;
+    char ch;    //to store operator choice
+     
+    printf("Enter first number: ");
+    scanf("%d",&num1);
+    printf("Enter second number: ");
+    scanf("%d",&num2);
+     
+    printf("Choose operation to perform (+,-,*,/,%): ");
+    scanf(" %c",&ch);
+     
+    result=0;
+    switch(ch)    
+    {
+        case '+':
+            result=num1+num2;
+            break;
+             
+        case '-':
+            result=num1-num2;
+            break;
+         
+        case '*':
+            result=num1*num2;
+            break;
+             
+        case '/':
+            result=(float)num1/(float)num2;
+            break;
+             
+        case '%':
+            result=num1%num2;
+            break;
+        default:
+            printf("Invalid operation.\n");
+    }
+ 
+    printf("Result: %d %c %d = %.2f\n",num1,ch,num2,result);
+    return 0;
+}
+
+
+
+5.GCD
+
+
+#include <stdio.h>
+
+int main()
+{
+   int a,b,num1,num2,temp,gcd;
+   printf("Enter the first number:");
+   scanf("%d",&num1);
+   printf("Enter the second number:");
+   scanf("%d",&num2);
+   
+   a=num1;
+   b=num2;
+   
+   while(b!=0)
+   {
+       temp=b;
+       b=a%b;
+       a=temp;
+   }
+   
+   gcd=a;
+   printf("GCD of %d and %d=%d",num1,num2,gcd);
+}
+
+
+6.LCM
+
+
+#include <stdio.h>
+
+int main()
+{
+   int a,b,num1,num2,temp,gcd,lcm;
+   printf("Enter the first number:");
+   scanf("%d",&num1);
+   printf("Enter the second number:");
+   scanf("%d",&num2);
+   
+   a=num1;
+   b=num2;
+   
+   while(b!=0)
+   {
+       temp=b;
+       b=a%b;
+       a=temp;
+   }
+   
+   gcd=a;
+   lcm=(num1*num2)/gcd;
+   printf("LCM of %d and %d=%d",num1,num2,gcd);
+}
+
+7. Prime number........
+
+
+#include <stdio.h>
+#include <conio.h>
+int main()
+{
+    int i,N,d;
+    int isprime;
+    printf("Enter the number:");
+    scanf("%d",&N);
+    
+    for(i=2;i<=N;i++)
+    
+    {
+    isprime=1;
+        for(d=2;d<i;d++)
+        if(i%d==0)
+        isprime=0;
+        
+        if(isprime!=0)
+        printf("%d ",i);
+    }
+     getch();
+}
+
+4. reserverse
+
+
+#include <stdio.h>
+#include <conio.h>
+int main()
+{
+    int n,sum=0,r,temp;
+    printf("Enter the number:");
+    scanf("%d",&n);
+    
+    temp=n;
+    
+    while(temp!=0){
+        r=temp%10;
+        sum=sum*10+r;
+        temp=temp/10;
+    }
+    
+    printf("Reverse=%d",sum);
+  
+}
