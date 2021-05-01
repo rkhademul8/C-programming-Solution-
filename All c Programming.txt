@@ -50,7 +50,7 @@ int main()
      
 }
 
-4. switch 
+4. switch using simple calculator
 
 
 #include <stdio.h>
@@ -183,7 +183,8 @@ int main()
      getch();
 }
 
-4. reserverse
+
+8. reserverse
 
 
 #include <stdio.h>
@@ -204,4 +205,130 @@ int main()
     
     printf("Reverse=%d",sum);
   
+}
+
+9. Write a program and findout vowel and  consonant
+
+
+#include <stdio.h>
+int main()
+{
+   char ch;
+   printf("Enter the a character:");
+   scanf("%c",&ch);
+   
+   if(ch=='A' || ch=='a' || ch=='E'|| ch=='e'|| ch=='i'|| ch=='I'|| ch=='o'|| ch=='O'
+   
+   || ch=='u'|| ch=='U'
+   )
+   printf(" %c is a vowel",ch);
+   else
+   printf(" %c is not vowel",ch);
+}
+
+
+
+10. Print this way 5,10,15,20,25... upto first 10 number
+
+// Using for loop
+
+#include <stdio.h>
+
+int main()
+{
+  int i,a;
+  a=5;
+  
+ for(i=1;i<=10;i++)
+ {
+     printf("%d\n",a*i);
+ }
+ return 0;
+
+}
+
+
+// Using  while loop
+
+#include <stdio.h>
+
+int main()
+{
+  int i,a;
+  a=5;
+  i=1;
+  while(i<=10)
+  {
+      printf("%d\n", a*i);
+      i++;
+  }
+  return 0;
+
+}
+
+// Using do while loop
+
+#include <stdio.h>
+
+int main()
+{
+  int i,a;
+  a=5;
+  i=1;
+  
+  do{
+      printf("%d\n",a*i);
+      i++;
+  }
+  
+  while(i<=10);
+
+}
+
+
+11.// 1+2+3+4...+n print the series of total number
+
+
+
+#include <stdio.h>
+
+int main()
+{
+  int i,n,sum=0;
+  
+  printf("Enter the last number of series:");
+  scanf("%d",&n);
+  
+  for(i=1;i<=n;i++)
+  
+ {
+      sum=sum+i;
+ }
+ printf("%d",sum);
+  
+
+}
+
+
+12.// (1*1)+(2*2)+(3*3)+(4*4)...+(n*n) print the series of total number (square)
+
+
+
+#include <stdio.h>
+
+int main()
+{
+  int i,n,sum=0;
+  
+  printf("Enter the last number of series:");
+  scanf("%d",&n);
+  
+  for(i=1;i<=n;i++)
+  
+ {
+      sum=sum+i*i;
+ }
+ printf("%d",sum);
+  
+
 }
