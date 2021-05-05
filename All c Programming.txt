@@ -332,3 +332,46 @@ int main()
   
 
 }
+
+
+13.
+// guessing game  in c 
+
+// Number guessing game using c program ....
+
+#include <stdio.h>
+#include <stdlib.h>
+#include <time.h>
+
+int main()
+{
+  int guess_num, n;
+  srand(time(NULL));
+  guess_num=rand()%50;
+  printf("I have a number in my mind(0 to 50). can you guess it?\n");
+  while(1){
+      
+ 
+  printf("Enter the guess number:");
+  scanf("%d",&n);
+  
+      if (guess_num==n)
+      
+      {
+          printf("You win the game");
+          break;
+      }
+      
+      else if(n>guess_num)
+      {
+           printf("Your enter number is too high!!! Try again \n");
+      }
+      
+      else
+      {
+          printf("Your enter number is too low!!! Try again \n");
+      }
+        
+    }
+    
+}
